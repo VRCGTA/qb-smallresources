@@ -11,7 +11,7 @@ Config.AFK = {
         ['admin'] = true,
         ['god'] = true
     },
-    secondsUntilKick = 1000000, -- AFK Kick Time Limit (in seconds)
+    secondsUntilKick = 1800,    -- AFK Kick Time Limit (in seconds)
     kickInCharMenu = false      -- Set to true if you want to kick players for being AFK even when they are in the character menu.
 }
 
@@ -71,11 +71,11 @@ Config.Discord = {
 }
 
 Config.Density = {
-    parked = 0.8,
-    vehicle = 0.8,
-    multiplier = 0.8,
-    peds = 0.8,
-    scenario = 0.8
+    parked = 0.6,
+    vehicle = 0.6,
+    multiplier = 0.6,
+    peds = 0.6,
+    scenario = 0.6
 }
 
 Config.Disable = {
@@ -107,30 +107,30 @@ Config.Consumables = {
         ['vodka'] = math.random(20, 40),
     },
     custom = { -- put any custom items here
-        -- ['newitem'] = {
-        --     progress = {
-        --         label = 'Using Item...',
-        --         time = 5000
-        --     },
-        --     animation = {
-        --         animDict = 'amb@prop_human_bbq@male@base',
-        --         anim = 'base',
-        --         flags = 8,
-        --     },
-        --     prop = {
-        --         model = false,
-        --         bone = false,
-        --         coords = false, -- vector 3 format
-        --         rotation = false, -- vector 3 format
-        --     },
-        --     replenish = {'''
-        --         type = 'Hunger', -- replenish type 'Hunger'/'Thirst' / false
-        --         replenish = math.random(20, 40),
-        --         isAlcohol = false, -- if you want it to add alcohol count
-        --         event = false, -- 'eventname' if you want it to trigger an outside event on use useful for drugs
-        --         server = false -- if the event above is a server event
-        --     }
-        -- }
+    -- ['newitem'] = {
+    --     progress = {
+    --         label = 'Using Item...',
+    --         time = 5000
+    --     },
+    --     animation = {
+    --         animDict = 'amb@prop_human_bbq@male@base',
+    --         anim = 'base',
+    --         flags = 8,
+    --     },
+    --     prop = {
+    --         model = false,
+    --         bone = false,
+    --         coords = false, -- vector 3 format
+    --         rotation = false, -- vector 3 format
+    --     },
+    --     replenish = {'''
+    --         type = 'Hunger', -- replenish type 'Hunger'/'Thirst' / false
+    --         replenish = math.random(20, 40),
+    --         isAlcohol = false, -- if you want it to add alcohol count
+    --         event = false, -- 'eventname' if you want it to trigger an outside event on use useful for drugs
+    --         server = false -- if the event above is a server event
+    --     }
+    -- }
     }
 }
 

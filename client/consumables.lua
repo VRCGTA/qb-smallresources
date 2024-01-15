@@ -162,7 +162,7 @@ RegisterNetEvent('consumables:client:Eat', function(itemName)
     }, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
         TriggerServerEvent('consumables:server:addHunger', QBCore.Functions.GetPlayerData().metadata.hunger + Config.Consumables.eat[itemName])
-        TriggerServerEvent('hud:server:RelieveStress', math.random(2, 4))
+        TriggerServerEvent('hud:server:RelieveStress', math.random(5, 10))
     end)
 end)
 
@@ -183,6 +183,7 @@ RegisterNetEvent('consumables:client:Drink', function(itemName)
         rotation = vec3(0.0, 0.0, -40),
     }, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
+        TriggerServerEvent('hud:server:RelieveStress', math.random(5, 10))
         TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().metadata.thirst + Config.Consumables.drink[itemName])
     end)
 end)
@@ -206,7 +207,7 @@ RegisterNetEvent('consumables:client:DrinkAlcohol', function(itemName)
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
         TriggerServerEvent('consumables:server:drinkAlcohol', itemName)
         TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().metadata.thirst + Config.Consumables.alcohol[itemName])
-        TriggerServerEvent('hud:server:RelieveStress', math.random(2, 4))
+        TriggerServerEvent('hud:server:RelieveStress', math.random(10, 30))
         alcoholCount += 1
         AlcoholLoop()
         if alcoholCount > 1 and alcoholCount < 4 then
@@ -377,6 +378,7 @@ RegisterNetEvent('consumables:client:UseJoint', function()
         disableCombat = true,
     }, {}, {}, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items['joint'], 'remove')
+        TriggerServerEvent('hud:server:RelieveStress', math.random(40, 60))
         if IsPedInAnyVehicle(PlayerPedId(), false) then
             TriggerEvent('animations:client:EmoteCommandStart', { 'smoke3' })
         else
