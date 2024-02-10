@@ -237,9 +237,9 @@ Config.BlacklistedPeds = {
 }
 
 Config.WeapDraw = {
-    variants = { 130, 122, 3, 6, 8 },
+    variants = { 130, 122, 160, 3, 6, 8 },
     weapons = {
-        --'WEAPON_STUNGUN',
+        'WEAPON_STUNGUN',
         'WEAPON_PISTOL',
         'WEAPON_PISTOL_MK2',
         'WEAPON_COMBATPISTOL',
