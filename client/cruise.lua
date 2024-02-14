@@ -66,16 +66,16 @@ local function triggerCruiseControl(veh)
     end
 end
 
-RegisterCommand('togglecruise', function()
-    local ped = PlayerPedId()
-    local veh = GetVehiclePedIsIn(ped, false)
-    local driver = GetPedInVehicleSeat(veh, -1)
-    local vehClass = GetVehicleClass(veh)
-    if ped == driver and vehicleClasses[vehClass] then
-        triggerCruiseControl(veh)
-    else
-        QBCore.Functions.Notify(Lang:t('cruise.unavailable'), "error")
-    end
-end, false)
+-- RegisterCommand('togglecruise', function()
+--     local ped = PlayerPedId()
+--     local veh = GetVehiclePedIsIn(ped, false)
+--     local driver = GetPedInVehicleSeat(veh, -1)
+--     local vehClass = GetVehicleClass(veh)
+--     if ped == driver and vehicleClasses[vehClass] then
+--         triggerCruiseControl(veh)
+--     else
+--         QBCore.Functions.Notify(Lang:t('cruise.unavailable'), "error")
+--     end
+-- end, false)
 
-RegisterKeyMapping('togglecruise', 'Toggle Cruise Control', 'keyboard', 'Y')
+-- RegisterKeyMapping('togglecruise', 'Toggle Cruise Control', 'keyboard', 'Y')
