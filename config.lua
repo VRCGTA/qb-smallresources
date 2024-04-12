@@ -67,11 +67,11 @@ Config.Discord = {
 }
 
 Config.Density = {
-    parked = 0.0,
-    vehicle = 0.0,
-    multiplier = 0.0,
-    peds = 0.0,
-    scenario = 0.0
+    parked = 0.8,
+    vehicle = 0.8,
+    multiplier = 0.8,
+    peds = 0.8,
+    scenario = 0.8
 }
 
 Config.Disable = {
@@ -220,7 +220,7 @@ Config.BlacklistedVehs = {
     [`jet`] = true,
     [`lazer`] = true,
     [`buzzard`] = true,
-    [`buzzard2`] = true,
+    [`buzzard2`] = false,
     [`annihilator`] = true,
     [`savage`] = true,
     [`titan`] = true,
@@ -230,7 +230,7 @@ Config.BlacklistedVehs = {
     [`maverick`] = true,
     [`blimp`] = true,
     [`airtug`] = true,
-    [`camper`] = true,
+    [`camper`] = false,
     [`hydra`] = true,
     [`oppressor`] = true,
     [`technical3`] = true,
@@ -256,9 +256,8 @@ Config.BlacklistedVehs = {
     [`scarab`] = true,
     [`scarab2`] = true,
     [`scarab3`] = true,
-    [`rrocket`] = true,
+    [`rrocket`] = false,
     [`ruiner2`] = true,
-    [`deluxo`] = true,
     [`cargoplane2`] = true,
     [`voltic2`] = true
 }

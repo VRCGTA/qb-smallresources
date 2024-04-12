@@ -162,7 +162,6 @@ RegisterNetEvent('consumables:client:Eat', function(itemName)
     }, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
         TriggerServerEvent('consumables:server:addHunger', QBCore.Functions.GetPlayerData().metadata.hunger + Config.Consumables.eat[itemName])
-        TriggerServerEvent('hud:server:RelieveStress', math.random(5, 10))
     end)
 end)
 
@@ -183,7 +182,6 @@ RegisterNetEvent('consumables:client:Drink', function(itemName)
         rotation = vec3(0.0, 0.0, -40),
     }, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
-        TriggerServerEvent('hud:server:RelieveStress', math.random(5, 10))
         TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().metadata.thirst + Config.Consumables.drink[itemName])
     end)
 end)
