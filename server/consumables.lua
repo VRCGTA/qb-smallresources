@@ -50,6 +50,12 @@ QBCore.Functions.CreateUseableItem('joint', function(source, item)
     TriggerClientEvent('consumables:client:UseJoint', source)
 end)
 
+QBCore.Functions.CreateUseableItem('seniti_osatou', function(source, item)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
+    TriggerClientEvent('consumables:client:UseOsatou', source)
+end)
+
 QBCore.Functions.CreateUseableItem('cokebaggy', function(source)
     TriggerClientEvent('consumables:client:Cokebaggy', source)
 end)

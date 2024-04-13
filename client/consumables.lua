@@ -387,6 +387,25 @@ RegisterNetEvent('consumables:client:UseJoint', function()
     end)
 end)
 
+RegisterNetEvent('consumables:client:UseOsatou', function()
+    QBCore.Functions.Progressbar('smoke_joint', Lang:t('consumables.joint_progress'), 1500, false, true, {
+        disableMovement = false,
+        disableCarMovement = false,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function() -- Done
+        TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items['seniti_osatou'], 'remove')
+        TriggerServerEvent('hud:server:RelieveStress', math.random(10, 20))
+        if IsPedInAnyVehicle(PlayerPedId(), false) then
+            TriggerEvent('animations:client:EmoteCommandStart', { 'smoke3' })
+        else
+            TriggerEvent('animations:client:EmoteCommandStart', { 'smokeweed' })
+        end
+        TriggerEvent('evidence:client:SetStatus', 'weedsmell', 300)
+        TriggerEvent('animations:client:SmokeWeed')
+    end)
+end)
+
 RegisterNetEvent('consumables:client:UseParachute', function()
     equipParachuteAnim()
     QBCore.Functions.Progressbar('use_parachute', Lang:t('consumables.use_parachute_progress'), 5000, false, true, {

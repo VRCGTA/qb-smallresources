@@ -111,6 +111,10 @@ Config.Consumables = {
         ['pmushroomspizzaslice'] =30,
         ['pseafoodslice'] =30,
         ['pvegpizzaslice'] =25,
+
+        -- seniti
+        ['seniti_donuts'] = math.random(10, 20),
+        ['seniti_rusk'] = math.random(10, 20),
     },
     drink = { -- default drink items
         ['water_bottle'] = math.random(35, 54),
@@ -130,6 +134,13 @@ Config.Consumables = {
         ['pcocacola'] =5,
         ['psprite'] =5,
         ['ppepper'] =5,
+
+        -- seniti
+        ['seniti_mango'] = math.random(20, 40),
+        ['seniti_strawberry'] = math.random(20, 40),
+        ['seniti_matcha'] = math.random(20, 40),
+        ['seniti_lemonade'] = math.random(20, 40),
+        ['seniti_kuma'] = math.random(20, 40),
     },
     alcohol = { -- default alcohol items
         ['whiskey'] = math.random(20, 30),
