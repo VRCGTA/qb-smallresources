@@ -42,6 +42,7 @@ CreateThread(function() -- all these should only need to be called once
     RemoveVehiclesFromGeneratorsInArea(1854.82 - 300.0, 3679.4 - 300.0, 33.82 - 300.0, 1854.82 + 300.0, 3679.4 + 300.0, 33.82 + 300.0)         -- police station sandy
     RemoveVehiclesFromGeneratorsInArea(-724.46 - 300.0, -1444.03 - 300.0, 5.0 - 300.0, -724.46 + 300.0, -1444.03 + 300.0, 5.0 + 300.0)         -- REMOVE CHOPPERS WOW
     RemoveVehiclesFromGeneratorsInArea(1220.20 - 300.0, 2709.16 - 300.0, 38.01 - 300.0, 1220.20 + 300.0, 2709.16 + 300.0, 38.01 + 300.0)       -- Remove vehicle sales area
+    RemoveVehiclesFromGeneratorsInArea(-1171.64 - 300.0, -881.87 - 300.0, 14.07 - 300.0, -1171.64 + 300.0, -881.87 + 300.0, 14.07 + 300.0)     -- Remove vehicle in burgershot park area
 end)
 
 CreateThread(function()
