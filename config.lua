@@ -103,14 +103,14 @@ Config.Consumables = {
         ['pbanana'] =5,
 
         -- cl-pizza pizza
-        ['pmacncheese'] =20,
-        ['pbbqporkmac'] =20,
-        ['pfresca'] =20,
-        ['pmargharitaslice'] =20,
-        ['pnapollitanoslice'] =20,
-        ['pmushroomspizzaslice'] =20,
-        ['pseafoodslice'] =20,
-        ['pvegpizzaslice'] =math.random(10, 20),
+        ['pmacncheese'] =30,
+        ['pbbqporkmac'] =30,
+        ['pfresca'] = 30,
+        ['pmargharitaslice'] =30,
+        ['pnapollitanoslice'] =30,
+        ['pmushroomspizzaslice'] =30,
+        ['pseafoodslice'] =30,
+        ['pvegpizzaslice'] = math.random(10, 20),
 
         -- seniti
         ['seniti_donuts'] = 20,
@@ -136,11 +136,11 @@ Config.Consumables = {
         ['ppepper'] =15,
 
         -- seniti
-        ['seniti_mango'] = 30,
-        ['seniti_strawberry'] = 30,
-        ['seniti_matcha'] = 30,
-        ['seniti_lemonade'] = 30,
-        ['seniti_kuma'] = 30,
+        ['seniti_mango'] = 40,
+        ['seniti_strawberry'] = 40,
+        ['seniti_matcha'] = 40,
+        ['seniti_lemonade'] = 40,
+        ['seniti_kuma'] = 40,
 
         -- drugs_creator
         ['drink_sprite'] = 1,
