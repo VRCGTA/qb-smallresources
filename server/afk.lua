@@ -2,7 +2,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 RegisterNetEvent('KickForAFK', function()
     local player = QBCore.Functions.GetPlayer(source)
-    if player.job.onduty then
+    if player.PlayerData.job.onduty then
         TriggerEvent('QBCore:ToggleDuty')
         TriggerClientEvent('ox_lib:alertDialog', source, {
             header = '放置中',
