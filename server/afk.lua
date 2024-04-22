@@ -1,7 +1,16 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 RegisterNetEvent('KickForAFK', function()
-	DropPlayer(source, Lang:t("afk.kick_message"))
+    local player = QBCore.Functions.GetPlayer(source)
+    if player.job.onduty then
+        TriggerEvent('QBCore:ToggleDuty')
+        TriggerClientEvent('ox_lib:alertDialog', source, {
+            header = '放置中',
+            content = '一定時間放置したため退勤状態になりました',
+            centered = true,
+            cancel = false
+        })
+    end
 end)
 
 QBCore.Functions.CreateCallback('qb-afkkick:server:GetPermissions', function(source, cb)
