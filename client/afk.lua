@@ -54,6 +54,7 @@ CreateThread(function()
                                 time -= 10
                             else
                                 TriggerServerEvent('KickForAFK')
+                                time = Config.AFK.secondsUntilKick
                             end
                         else
                             time = Config.AFK.secondsUntilKick
