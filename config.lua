@@ -273,7 +273,9 @@ Config.BlacklistedVehs = {
     [`rrocket`] = false,
     [`ruiner2`] = false,
     [`cargoplane2`] = true,
-    [`voltic2`] = true
+    [`voltic2`] = true,
+    [`towtruck`] = true,
+    [`towtruck2`] = true,
 }
 
 Config.BlacklistedWeapons = {
