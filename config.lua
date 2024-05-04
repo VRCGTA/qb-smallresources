@@ -92,11 +92,11 @@ Config.Consumables = {
         ['twerks_candy'] = 10,
         ['snikkel_candy'] = 10,
         -- Casino Bar Snacks
-        ["casino_burger"] = 10,
-        ["casino_psqs"] = 10,
-        ["casino_ego_chaser"] = 10,
-        ["casino_sandwitch"] = 10,
-        ["casino_donut"] = 10,
+        ["casino_burger"] = 1,
+        ["casino_psqs"] = 1,
+        ["casino_ego_chaser"] = 1,
+        ["casino_sandwitch"] = 1,
+        ["casino_donut"] = 1,
         -- cl-pizza fruit
         ['porange'] =5,
         ['papple'] =5,
@@ -110,7 +110,7 @@ Config.Consumables = {
         ['pnapollitanoslice'] =30,
         ['pmushroomspizzaslice'] =30,
         ['pseafoodslice'] =30,
-        ['pvegpizzaslice'] = math.random(10, 20),
+        ['pvegpizzaslice'] = 29, -- ベジタリアンは不健康
 
         -- seniti
         ['seniti_donuts'] = 20,
@@ -121,10 +121,10 @@ Config.Consumables = {
         ['kurkakola'] = 15,
         ['coffee'] = 15,
         -- Casino Bar Drinks
-        ["casino_coke"] = 15,
-        ["casino_sprite"] = 15,
-        ["casino_luckypotion"] = 15,
-        ["casino_coffee"] = 15,
+        ["casino_coke"] = 1,
+        ["casino_sprite"] = 1,
+        ["casino_luckypotion"] = 1,
+        ["casino_coffee"] = 1,
         -- cl-pizza drinkable
         ['pwatercup'] =15,
         ['pespressomacchiato'] =15,
