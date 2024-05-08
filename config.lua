@@ -150,7 +150,7 @@ Config.Consumables = {
         ['beer'] = 20,
         ['vodka'] = 20,
         -- Casino Bar Drinks
-        ["casino_beer"] = 20,
+        ["casino_beer"] = 1,
         -- cl-pizza drinkable
         ['pbeermugfull'] =20,
         ['predwine'] =20,
