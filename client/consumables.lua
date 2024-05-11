@@ -161,7 +161,7 @@ RegisterNetEvent('consumables:client:Eat', function(itemName)
         rotation = vec3(30, 0.0, 0.0),
     }, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
-        TriggerServerEvent('consumables:server:addHunger', QBCore.Functions.GetPlayerData().metadata.hunger + Config.Consumables.eat[itemName])
+        TriggerServerEvent('consumables:server:addHunger', QBCore.Functions.GetPlayerData().condition.hunger + Config.Consumables.eat[itemName])
     end)
 end)
 
@@ -182,7 +182,7 @@ RegisterNetEvent('consumables:client:Drink', function(itemName)
         rotation = vec3(0.0, 0.0, -40),
     }, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
-        TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().metadata.thirst + Config.Consumables.drink[itemName])
+        TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().condition.thirst + Config.Consumables.drink[itemName])
     end)
 end)
 
@@ -204,7 +204,7 @@ RegisterNetEvent('consumables:client:DrinkAlcohol', function(itemName)
     }, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
         TriggerServerEvent('consumables:server:drinkAlcohol', itemName)
-        TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().metadata.thirst + Config.Consumables.alcohol[itemName])
+        TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().condition.thirst + Config.Consumables.alcohol[itemName])
         TriggerServerEvent('hud:server:RelieveStress', 5)
         alcoholCount += 1
         AlcoholLoop()
