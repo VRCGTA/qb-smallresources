@@ -13,7 +13,7 @@ for k, _ in pairs(Config.Consumables.eat) do
     QBCore.Functions.CreateUseableItem(k, function(source, item)
         local Player = QBCore.Functions.GetPlayer(source)
         if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
-        TriggerClientEvent('consumables:client:Eat', source, item.name)
+        TriggerClientEvent('consumables:client:Eat', source, item.name, item.info)
     end)
 end
 

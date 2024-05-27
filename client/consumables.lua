@@ -144,7 +144,7 @@ end
 
 -- Events
 
-RegisterNetEvent('consumables:client:Eat', function(itemName)
+RegisterNetEvent('consumables:client:Eat', function(itemName, info)
     QBCore.Functions.Progressbar('eat_something', Lang:t('consumables.eat_progress'), 5000, false, true, {
         disableMovement = false,
         disableCarMovement = false,
@@ -161,7 +161,13 @@ RegisterNetEvent('consumables:client:Eat', function(itemName)
         rotation = vec3(30, 0.0, 0.0),
     }, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
-        TriggerServerEvent('consumables:server:addHunger', QBCore.Functions.GetPlayerData().condition.hunger + Config.Consumables.eat[itemName])
+        local mul = 1
+        if info["quality"] then
+            if info["quality"] == "bad" then
+                mul = 0.2
+            end
+        end
+        TriggerServerEvent('consumables:server:addHunger', QBCore.Functions.GetPlayerData().condition.hunger + (Config.Consumables.eat[itemName] * mul))
     end)
 end)
 
