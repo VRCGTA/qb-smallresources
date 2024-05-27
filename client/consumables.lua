@@ -163,7 +163,7 @@ RegisterNetEvent('consumables:client:Eat', function(itemName, info)
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
         local mul = 1
         if info["quality"] then
-            if info["quality"] == "bad" then
+            if info["quality"] < 20 then
                 mul = 0.2
             end
         end
