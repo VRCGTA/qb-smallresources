@@ -161,17 +161,11 @@ RegisterNetEvent('consumables:client:Eat', function(itemName, info)
         rotation = vec3(30, 0.0, 0.0),
     }, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
-        local mul = 1
-        if info["quality"] then
-            if info["quality"] < 20 then
-                mul = 0.2
-            end
-        end
-        TriggerServerEvent('consumables:server:addHunger', QBCore.Functions.GetPlayerData().condition.hunger + (Config.Consumables.eat[itemName] * mul))
+        TriggerServerEvent('consumables:server:addHunger', QBCore.Functions.GetPlayerData().condition.hunger + (Config.Consumables.eat[itemName] * ((info["quality"] or 100) / 100)))
     end)
 end)
 
-RegisterNetEvent('consumables:client:Drink', function(itemName)
+RegisterNetEvent('consumables:client:Drink', function(itemName, info)
     QBCore.Functions.Progressbar('drink_something', Lang:t('consumables.drink_progress'), 5000, false, true, {
         disableMovement = false,
         disableCarMovement = false,
@@ -188,11 +182,11 @@ RegisterNetEvent('consumables:client:Drink', function(itemName)
         rotation = vec3(0.0, 0.0, -40),
     }, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
-        TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().condition.thirst + Config.Consumables.drink[itemName])
+        TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().condition.thirst + (Config.Consumables.drink[itemName] * ((info["quality"] or 100) / 100)))
     end)
 end)
 
-RegisterNetEvent('consumables:client:DrinkAlcohol', function(itemName)
+RegisterNetEvent('consumables:client:DrinkAlcohol', function(itemName, info)
     QBCore.Functions.Progressbar('drink_alcohol', Lang:t('consumables.liqour_progress'), math.random(3000, 6000), false, true, {
         disableMovement = false,
         disableCarMovement = false,
@@ -210,7 +204,7 @@ RegisterNetEvent('consumables:client:DrinkAlcohol', function(itemName)
     }, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
         TriggerServerEvent('consumables:server:drinkAlcohol', itemName)
-        TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().condition.thirst + Config.Consumables.alcohol[itemName])
+        TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().condition.thirst + (Config.Consumables.alcohol[itemName] * ((info["quality"] or 100) / 100)))
         TriggerServerEvent('hud:server:RelieveStress', 5)
         alcoholCount += 1
         AlcoholLoop()
