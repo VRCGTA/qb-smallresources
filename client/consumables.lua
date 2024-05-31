@@ -377,13 +377,13 @@ RegisterNetEvent('consumables:client:UseJoint', function()
     }, {}, {}, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items['joint'], 'remove')
         TriggerServerEvent('hud:server:RelieveStress', math.random(25, 45))
-        if IsPedInAnyVehicle(PlayerPedId(), false) then
-            TriggerEvent('animations:client:EmoteCommandStart', { 'smoke3' })
-        else
-            TriggerEvent('animations:client:EmoteCommandStart', { 'smokeweed' })
-        end
-        -- TriggerEvent('evidence:client:SetStatus', 'weedsmell', 300)
-        TriggerEvent('animations:client:SmokeWeed')
+        -- if IsPedInAnyVehicle(PlayerPedId(), false) then
+        --     TriggerEvent('animations:client:EmoteCommandStart', { 'smoke3' })
+        -- else
+        --     TriggerEvent('animations:client:EmoteCommandStart', { 'smokeweed' })
+        -- end
+        -- -- TriggerEvent('evidence:client:SetStatus', 'weedsmell', 300)
+        -- TriggerEvent('animations:client:SmokeWeed')
     end)
 end)
 
@@ -396,12 +396,12 @@ RegisterNetEvent('consumables:client:UseOsatou', function()
     }, {}, {}, {}, function() -- Done
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items['seniti_osatou'], 'remove')
         TriggerServerEvent('hud:server:RelieveStress', math.random(25, 45))
-        if IsPedInAnyVehicle(PlayerPedId(), false) then
-            TriggerEvent('animations:client:EmoteCommandStart', { 'smoke3' })
-        else
-            TriggerEvent('animations:client:EmoteCommandStart', { 'smokeweed' })
-        end
-        TriggerEvent('animations:client:SmokeWeed')
+        -- if IsPedInAnyVehicle(PlayerPedId(), false) then
+        --     TriggerEvent('animations:client:EmoteCommandStart', { 'smoke3' })
+        -- else
+        --     TriggerEvent('animations:client:EmoteCommandStart', { 'smokeweed' })
+        -- end
+        -- TriggerEvent('animations:client:SmokeWeed')
     end)
 end)
 
